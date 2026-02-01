@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Grace 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ffd1e8,#fff0f6);
+    overflow:hidden;
+    color:#333;
+  }
+  audio{display:none;}
+  .slide {
+    display:none;
+    min-height:100vh;
+    width:100%;
+    padding:60px 20px;
+    box-sizing:border-box;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation:fadeIn 1s ease;
+  }
+  .slide.active { display:flex; }
+  h1,h2 { color:#e11d48; }
+  .heart { font-size:4rem; animation:float 2s infinite; }
+  .box {
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    max-width:900px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    font-size:1.15rem;
+    line-height:1.8;
+  }
+  button {
+    padding:12px 26px;
+    border:none;
+    border-radius:30px;
+    background:#e11d48;
+    color:white;
+    font-size:1rem;
+    margin:0 10px;
+    cursor:pointer;
+  }
+  .slideshow img {
+    width:100%;
+    max-width:400px;
+    border-radius:20px;
+    display:none;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  }
+  .falling-heart {
+    position:fixed;
+    top:-20px;
+    font-size:20px;
+    animation:fall linear forwards;
+    color:#e11d48;
+    pointer-events:none;
+  }
+  @keyframes fall { to { transform:translateY(110vh); opacity:0; } }
+  @keyframes float {
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+  }
+  @keyframes fadeIn {
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+</style>
+</head>
+<body>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SLIDE 1 -->
+<div class="slide active">
+  <div class="heart">❤️</div>
+  <h1>Happy Valentine’s Day, Grace 💖</h1>
+  <p>You are my once-in-a-lifetime kind of love.</p>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+  <div class="box">
+    <h2>To My Grace…</h2>
+    <p>
+      Before you came into my life, I didn’t know love could feel this safe, this warm, this alive.
+      I didn’t know that someone’s name could calm my heart… and now your name does that every time.
+    </p>
+    <p>
+      You are my peace in chaos, my smile on bad days, and my favorite thought before I sleep.
+    </p>
+  </div>
+</div>
+
+<!-- SLIDE 3 – HOW WE MET -->
+<div class="slide">
+  <div class="box">
+    <h2>How We Met 💫</h2>
+    <p>
+      Out of all the places in the world… life chose <strong>Boudha</strong> to introduce me to you.
+    </p>
+    <p>
+      We spent that time together in a karaoke, not knowing we were creating the
+      very first page of our forever.
+    </p>
+    <p>
+      The moment I saw you, Grace… it was love at first sight.
+      My heart recognized you before my mind could explain it.
+    </p>
+    <p>
+      That night didn’t just give me memories… it gave me <strong>you</strong>.
+      And my story stopped being about “me” and started being about <strong>us</strong>.
+    </p>
+  </div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+  <div class="box">
+    <p>
+      Grace… I love the way you care.  
+      I love the way you listen.  
+      I love the way you try even when you’re tired.  
+      I love the way you make my world softer just by being in it.
+    </p>
+    <p>
+      If I had one life and a thousand chances,  
+      I would still choose you in every version of it.
+    </p>
+  </div>
+</div>
+
+<!-- SLIDE 5 – PHOTOS -->
+<div class="slide">
+  <h2>Our Memories 📸</h2>
+  <div class="slideshow">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+  </div>
+</div>
+
+<!-- SLIDE 6 – FUTURE DREAMS -->
+<div class="slide">
+  <div class="box">
+    <h2>Our Future Dreams 🌙</h2>
+    <p>
+      I dream of the day I get to call you my <strong>wife</strong>, Grace.
+      Not just in words… but in life, in heart, in forever.
+    </p>
+    <p>
+      I want to travel the world with you — hand in hand —
+      collecting moments, photos, sunsets, and stories together.
+    </p>
+    <p>
+      I promise to make you feel loved, chosen, and special every single day.
+    </p>
+    <p>
+      My goal in life is simple:
+      To make you the <strong>most special girl in the world</strong>… forever.
+    </p>
+  </div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide">
+  <div class="box">
+    <p>
+      Grace… you are my heart’s home.  
+      My forever.  
+      My favorite person in every universe.
+    </p>
+    <p><strong>Forever yours,</strong><br>— Sulav 💞</p>
+  </div>
+</div>
+
+<!-- SLIDE 8 -->
+<div class="slide">
+  <h2>One Last Question… 💌</h2>
+  <p style="font-size:1.3rem;">Grace, will you be my Valentine… today and always? 🌹</p>
+  <button onclick="finalYes()">Yes 💘</button>
+</div>
+
+<div style="position:fixed;bottom:20px;width:100%;text-align:center;">
+  <button onclick="prev()">⬅ Back</button>
+  <button onclick="next()">Next ➡</button>
+</div>
+
+<script>
+document.body.addEventListener("click",()=>{
+  document.getElementById("music").play();
+},{once:true});
+
+let index=0;
+const slides=document.querySelectorAll(".slide");
+function show(i){
+  slides.forEach(s=>s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+function next(){ if(index<slides.length-1){ index++; show(index); } }
+function prev(){ if(index>0){ index--; show(index); } }
+
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="falling-heart";
+  heart.innerHTML="💖";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(Math.random()*3+3)+"s";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},300);
+
+let s=0;
+const imgs=document.querySelectorAll(".slideshow img");
+function showSlide(){
+  imgs.forEach(i=>i.style.display="none");
+  s=(s+1)%imgs.length;
+  imgs[s].style.display="block";
+}
+setInterval(showSlide,2500);
+showSlide();
+
+function finalYes(){
+  alert("You just made me the happiest person alive 😭💖");
+}
+</script>
+
+</body>
+</html>
